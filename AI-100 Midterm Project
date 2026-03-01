@@ -1,0 +1,32 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Apple production data (in tonnes)
+data = {
+    "Year": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+    "Production_tonnes": [
+        735200,
+        756100,
+        701600,
+        763300,
+        661900,
+        737100,
+        603800,
+        609200
+    ]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Display DataFrame
+print(df)
+
+# Plotting
+plt.figure(figsize=(10, 6))
+plt.plot(df["Year"], df["Production_tonnes"], marker='o')
+plt.title("Annual Apple Production in Japan (2017–2024)")
+plt.xlabel("Year")
+plt.ylabel("Production (tonnes)")
+plt.grid(True)
+plt.show()
